@@ -1,0 +1,14 @@
+import React, { useContext, useState, useEffect } from "react";
+import { UserContext } from "../App";
+
+function ContextTest() {
+  const [userSession, setUserSession] = useContext(UserContext);
+
+  return (
+    <div className="">
+      <button type="submit" onClick={() => setUserSession(!userSession)}>{userSession ? "Sign Out" : "Sign Out"}</button>
+    </div>
+  )
+}
+
+export default ContextTest
